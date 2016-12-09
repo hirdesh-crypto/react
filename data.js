@@ -1,13 +1,4 @@
-import React from 'react';
-import Collapsible from 'react-collapsible';
-require('./app.css');
-import Data from './data.js'
-class App extends React.Component {
-   constructor() {
-      super();
-
-      this.state = {
-         data: [
+var Data = [
     {
         "question": "Where is my order?",
         "answer": "To know the status of your order please follow the steps below:  <ul><li>Visit the Track Order section on the website</li><li>Enter your Order ID & Phone Number</li><li>You will get to know the status of your order (Is it confirmed, out for delivery, packed etc.) Rest easy!</li>",
@@ -130,30 +121,3 @@ class App extends React.Component {
         "tags": ["referral"]
 }
     ]
-      }
-
-   }
-
-   render() {
-      return (
-         <div>
-            <div>
-               {this.state.data.map((dynamicComponent, i) => <Content
-                  key = {i} componentData = {dynamicComponent}/>)}
-            </div>
-         </div>
-      );
-   }
-}
-
-class Content extends React.Component {
-   render() {
-      return (
-         <div>
-              <Collapsible trigger={this.props.componentData.question}>{this.props.componentData.answer}</Collapsible>
-         </div>
-      );
-   }
-}
-
-export default App;

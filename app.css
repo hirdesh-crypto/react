@@ -224,15 +224,19 @@ h2 {
     color: #2f353e;
 }
 .Collapsible__trigger:after {
-    font-family: '[set]Foundicons';
-    content: '+';
+    content: '\02795';
+    transform: rotate(-90deg);
+    transition: all .5s ease-out;
+    -webkit-font-smoothing: antialiased;
     position: absolute;
-    vertical-align: middle;
     right: 10px;
     top: 20px;
     display: block;
     transition: transform 300ms;
 }
 .Collapsible__trigger.is-open:after {
-    content: '-';
+    content: '\2796';
+    transform: rotate(0deg);
+    transition: all .5s ease-out;
+    -webkit-font-smoothing: antialiased;
 }
