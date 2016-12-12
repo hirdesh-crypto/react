@@ -1,0 +1,11 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    margin: auto;
+}
